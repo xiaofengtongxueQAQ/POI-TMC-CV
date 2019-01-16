@@ -36,7 +36,7 @@ public class PrdCategoryHandler extends WorkbookRowHandler {
     public Set<String> getCategories() {
         return categories;
     }
-
+//test
     private String getCategory(List<WorkData> list) throws UnknownColumnException {
         String val = evaluateWorkData(list, "A").getValue(new Object2StringConverter());
         if (val != null) val = StringUtils.trim(val);
