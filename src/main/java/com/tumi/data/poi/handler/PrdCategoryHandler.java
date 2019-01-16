@@ -17,7 +17,7 @@ import static com.googlecode.easyec.sika.mappings.ColumnEvaluatorFactory.evaluat
 public class PrdCategoryHandler extends WorkbookRowHandler {
 
     private Set<String> categories = new HashSet<>();
-
+//
     @Override
     public void doInit() throws WorkingException {
         setBlankRowListener(DEFAULT);
