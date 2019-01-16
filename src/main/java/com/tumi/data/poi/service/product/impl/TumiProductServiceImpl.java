@@ -83,6 +83,7 @@ public class TumiProductServiceImpl implements TumiProductService {
     public void checkLineDate(List<List<WorkData>> workDataList) {
         LOG.info("begin check online date&offline date...");
         workDataList.forEach(list -> {
+            //处理日期逻辑
             WorkData onlineDate = WorkDataUtils.getData2String(list, poiProperties.getOnlineDateColumn());
             WorkData offlineDate = WorkDataUtils.getData2String(list, poiProperties.getOfflineDateColumn());
             if (null != onlineDate) {
@@ -96,6 +97,8 @@ public class TumiProductServiceImpl implements TumiProductService {
                 onlineDate.setValue(onlineString);
                 offlineDate.setValue(offlineString);
             }
+            //处理字符串为0的逻辑
+
         });
     }
 
